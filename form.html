@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - ConectaTech</title>
+    <link rel="stylesheet" href="assets/styles/form.css" />
+</head>
+<body>
+    <section class="Formulario">
+        <div class="container">
+            <h1>Cadastre-se</h1>
+            <form id="cadastroForm">
+                <div class="input-group">
+                    <p class="texto">Nome completo</p>
+                    <input type="text" id="nomeCompleto" placeholder="Seu nome completo" required>
+                </div>
+                <div class="input-group">
+                    <p class="texto">Email</p>
+                    <input type="email" id="email" placeholder="Seu email" required>
+                </div>
+                <div class="input-group">
+                    <p class="texto">Whatsapp</p>
+                    <input type="tel" id="whatsapp" placeholder="Seu número de contato" required>
+                </div>
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <p class="texto">Sexo</p>
+                        <select id="sexo" required>
+                            <option value disabled selected>Seu gênero</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <p class="texto">Data de Nascimento</p>
+                        <input type="date" id="dataNascimento" required>
+                    </div>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
