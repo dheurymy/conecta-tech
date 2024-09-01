@@ -1,0 +1,128 @@
+/* == NAVEGAÇÃO - MENU == */
+header{
+    --corfundo: #01032D;
+    --cortexto: #ECECEC;
+    --corborda: #A0A0A0;
+    width: 100%;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 4em;
+    width:100%;
+    margin: auto;
+}
+
+header nav .navlinks{
+    display: flex;
+    gap: 75px;
+}
+
+header nav .navlinks .navlinks__link{
+    color: var(--cortexto);
+    border: 1px solid var(--corborda);
+    width: 170px;
+    border-radius: 8px;
+    padding: 8px 9px;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+header nav .hamburger, .closeIcon{
+    display: none;
+    cursor: pointer;
+}
+
+.closeIcon{
+    color: #FFFFFF;
+    width: 0;
+}
+
+a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+/* == NAVEGAÇÃO - MENU == */
+@media screen and (max-width: 870px){
+    header nav {
+        padding: 1% 1em;
+    }
+    header nav .navlinks .navlinks__link {
+        width: 150px; 
+        font-size: 0.8rem; 
+        gap: 5px;
+        padding: 5px 7px; 
+    }
+}
+
+@media screen and (max-width: 768px){
+    header nav{
+        display: flex;
+        justify-content: start;
+    }
+    header nav .navlinks{
+        display: none;
+    }
+    header nav .logo{
+        font-size: 30px;
+    }
+    header nav .hamburger{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        top: 0;
+        left: -300px;
+        opacity: 0;
+        width: 250px;
+        height: 100vh;
+        background: var(--corfundo);
+        transition: 350ms ease-in-out;
+    }
+    .menu.active{
+        left: 0;
+        opacity: 1;
+    }
+    .menu.active .navlinks{
+        display: flex;
+        gap: 24px;
+        padding: 70px 15px;
+        flex-direction: column;
+    }
+    .menu.active ul li{
+        animation: showLinks 0.6s backwards;
+    }
+    .menu.active ul li:nth-child(1){
+        animation-delay: 0.4s;
+    }
+    .menu.active ul li:nth-child(2){
+        animation-delay: 0.6s;
+    }
+    .menu.active ul li:nth-child(3){
+        animation-delay: 0.8s;
+    }
+    .menu.active ul li:nth-child(4){
+        animation-delay: 0.8s;
+    }
+    .menuIcon{
+        width: 30px;
+        height: 30px;
+        color: #000;
+    }
+    .closeIcon{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        color: #000;
+    }
+}
