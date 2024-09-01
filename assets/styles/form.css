@@ -6,6 +6,8 @@ body {
     margin: 0;
     background-color: #01032D;
     font-family: 'Inter', sans-serif;
+    background-image: url("../images/fundo.svg");
+    background-size: cover;
 }
 
 .Formulario {
@@ -70,9 +72,6 @@ select {
     padding-left: 1rem;
 }
 
-#dataNascimento {
-    padding-left: 1rem;
-}
 
 button {
     width: 100%;
