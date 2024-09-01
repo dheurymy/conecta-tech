@@ -1,0 +1,100 @@
+/* Importa fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define as variáveis de cor usando :root */
+:root {
+    --corFundo: #180161; 
+    --corDestaques: #FF6D00; 
+    --corBranco : #FFFFFF;
+    --corCinza : #ECECEC;
+    --corBorda: #A0A0A0;
+}
+
+.midContent {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    font-family: "Noto Sans", sans-serif;
+    background-color: var(--corFundo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.midContentTitle {
+    font-weight: 800;
+    font-size: x-large;
+    padding: 0 5% 5% 5%;
+    color: var(--corBranco);
+}
+
+.midContentLegend {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 5% 5% 5%;
+    max-width: 800px;
+    color: var(--corCinza);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid var(--corBranco);
+    border-radius: 1vh 10vh 1vh 1vh;
+    width: 90%;
+    min-width: 300px;
+    max-width: 500px;
+    height: 270px;
+    padding: 3%;
+    background-color: var(--corBranco);
+    transition: transform 0.2s ease;
+}
+
+.cardNumero {
+    font-size: xx-large;
+    font-weight: 800;
+    padding-bottom: 2vh;
+}
+
+.cardTitulo{
+    font-size: large;
+    font-weight: 600;
+    padding-bottom: 2vh;
+}
+
+.cardLegend {
+    font-size: 1em;
+    font-weight: 400;
+
+    text-align: left;
+
+}
+
+.card:hover{
+    transform: transLateY(10px)
+}
+
+@media (min-width: 901px) {
+    .midContentTitle {
+        font-size: xx-large;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+}
