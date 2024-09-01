@@ -8,9 +8,8 @@
 :root {
    --corFundo: #180161; 
    --corDestaques: #FF6D00; 
-   --corBranco : #FFF;
-   --corCinza : #ECECEC;
-
+   --corBranco: #FFF;
+   --corCinza: #ECECEC;
 }
 
 body {
@@ -18,12 +17,10 @@ body {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-
    width: 100%;
    height: 100dvh;
 
    font-family: "Inter", sans-serif;
-
    background-image: url("../images/fundo.svg");
    background-size: cover;
 }
@@ -34,7 +31,6 @@ main {
    align-items: center;
    justify-content: center;
    gap: 5%;
-
    width: 80%;
    min-height: 85dvh;
 }
@@ -61,7 +57,6 @@ main {
 
    width: 100%;
 }
-
 
 .textoPrincipal > p {
    color: var(--corCinza);
@@ -125,6 +120,16 @@ main {
    transition: all 0.3s ease;
 }
 
+.textoPrincipal > button {
+   /* color: var(--corCinza); */
+   /* font-size: 1em; */
+   font-weight: 200;
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   justify-content: center;
+}
+
 .imagemPrincipal {
    display: flex;
    flex-direction: column;
@@ -134,6 +139,108 @@ main {
    width: 25%;
 }
 
+
+.Formulario {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+
+.container {
+   padding: 2rem;
+   border-radius: 10px;
+   width: 100%;
+   max-width: 600px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+   text-align: center;
+   color: #FFF;
+   font-size: 2rem;
+   margin-bottom: 1.5rem;
+}
+
+.input-group {
+   width: 100%;
+   margin-bottom: 1rem;
+
+}
+
+.input-group p {
+   margin-bottom: 0.5rem;
+   color: #FFF;
+   font-size: 0.875rem;
+}
+
+.input-group-row {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
+}
+
+.input-group-row .input-group {
+   flex: 1;
+}
+
+input,
+select {
+   padding: 0.75rem 0;
+   width: 100%;
+   border: 2px solid #FF6D00;
+   border-radius: 5px;
+   background-color: #01032D;
+   color: white;
+   font-size: 0.875rem;
+}
+
+input::placeholder,
+select {
+   color: #ccc;
+   padding-left: 1rem;
+}
+
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: var(--corFundo); 
+   color: white; 
+   z-index: 1000; 
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   /* padding: 10px 20px; */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-item {
+   flex: 1;
+   text-align: center;
+}
+
+.navbar-item a {
+   text-decoration: none;
+   color: var(--corBranco);;
+   font-size: 16px;
+   display: block;
+   padding: 10px;
+   transition: background-color 0.3s;
+}
+
+.navbar-item a:hover {
+   background-color: #171fc3; 
+}
+
+main {
+   margin-top: 60px; 
+}
 .imagemPrincipal > img {
    
    width: 100%;
